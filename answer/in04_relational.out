@@ -1,0 +1,28 @@
+x        	 IDENT
+<        	 LSS
+1        	 INT_LIT
+;        	 SEMICOLON
+x        	 IDENT
+>        	 GTR
+1        	 INT_LIT
+;        	 SEMICOLON
+x        	 IDENT
+<=       	 LEQ
+1        	 INT_LIT
+;        	 SEMICOLON
+x        	 IDENT
+>=       	 GEQ
+1        	 INT_LIT
+;        	 SEMICOLON
+x        	 IDENT
+==       	 EQL
+1        	 INT_LIT
+;        	 SEMICOLON
+x        	 IDENT
+!=       	 NEQ
+1        	 INT_LIT
+;        	 SEMICOLON
+
+Finish scanning,
+total line: 6
+comment line: 0

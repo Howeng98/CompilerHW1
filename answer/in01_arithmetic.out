@@ -1,0 +1,41 @@
+x        	 IDENT
++        	 ADD
+1        	 INT_LIT
+;        	 SEMICOLON
+x        	 IDENT
+-        	 SUB
+1        	 INT_LIT
+;        	 SEMICOLON
+x        	 IDENT
+*        	 MUL
+1        	 INT_LIT
+;        	 SEMICOLON
+x        	 IDENT
+/        	 QUO
+1        	 INT_LIT
+;        	 SEMICOLON
+x        	 IDENT
+%        	 REM
+1        	 INT_LIT
+;        	 SEMICOLON
+x        	 IDENT
+++       	 INC
+;        	 SEMICOLON
+x        	 IDENT
+--       	 DEC
+;        	 SEMICOLON
+x        	 IDENT
+&&       	 AND
+y        	 IDENT
+;        	 SEMICOLON
+x        	 IDENT
+||       	 OR
+y        	 IDENT
+;        	 SEMICOLON
+!        	 NOT
+x        	 IDENT
+;        	 SEMICOLON
+
+Finish scanning,
+total line: 11
+comment line: 0

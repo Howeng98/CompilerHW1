@@ -1,0 +1,28 @@
+x        	 IDENT
+=        	 ASSIGN
+1        	 INT_LIT
+;        	 SEMICOLON
+x        	 IDENT
++=       	 ADD_ASSIGN
+1        	 INT_LIT
+;        	 SEMICOLON
+x        	 IDENT
+-=       	 SUB_ASSIGN
+1        	 INT_LIT
+;        	 SEMICOLON
+x        	 IDENT
+*=       	 MUL_ASSIGN
+1        	 INT_LIT
+;        	 SEMICOLON
+x        	 IDENT
+/=       	 QUO_ASSIGN
+1        	 INT_LIT
+;        	 SEMICOLON
+x        	 IDENT
+%=       	 REM_ASSIGN
+1        	 INT_LIT
+;        	 SEMICOLON
+
+Finish scanning,
+total line: 6
+comment line: 0

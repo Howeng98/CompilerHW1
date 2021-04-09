@@ -1,0 +1,47 @@
+float    	 FLOAT
+foo      	 IDENT
+(        	 LPAREN
+int      	 INT
+a        	 IDENT
+,        	 COMMA
+float    	 FLOAT
+b        	 IDENT
+)        	 RPAREN
+{        	 LBRACE
+return   	 RETURN
+a        	 IDENT
++        	 ADD
+b        	 IDENT
+;        	 SEMICOLON
+}        	 RBRACE
+void     	 VOID
+vv       	 IDENT
+(        	 LPAREN
+)        	 RPAREN
+{        	 LBRACE
+return   	 RETURN
+;        	 SEMICOLON
+}        	 RBRACE
+int      	 INT
+main     	 IDENT
+(        	 LPAREN
+)        	 RPAREN
+{        	 LBRACE
+print    	 PRINT
+(        	 LPAREN
+foo      	 IDENT
+(        	 LPAREN
+1        	 INT_LIT
+,        	 COMMA
+0.2      	 FLOAT_LIT
+)        	 RPAREN
+)        	 RPAREN
+;        	 SEMICOLON
+return   	 RETURN
+0        	 INT_LIT
+;        	 SEMICOLON
+}        	 RBRACE
+
+Finish scanning,
+total line: 12
+comment line: 0
