@@ -1,0 +1,33 @@
+int      	 INT
+X        	 IDENT
+;        	 SEMICOLON
+int      	 INT
+y        	 IDENT
+=        	 ASSIGN
+5        	 INT_LIT
+;        	 SEMICOLON
+float    	 FLOAT
+a        	 IDENT
+=        	 ASSIGN
+6.2555   	 FLOAT_LIT
+,        	 COMMA
+b        	 IDENT
+=        	 ASSIGN
+3.14     	 FLOAT_LIT
+;        	 SEMICOLON
+bool     	 BOOL
+u_u      	 IDENT
+=        	 ASSIGN
+false    	 FALSE
+;        	 SEMICOLON
+string   	 STRING
+A213     	 IDENT
+=        	 ASSIGN
+"        	 QUOTA
+abc      	 STRING_LIT
+"        	 QUOTA
+;        	 SEMICOLON
+
+Finish scanning,
+total line: 5
+comment line: 0

@@ -1,41 +1,28 @@
 x        	 IDENT
-+        	 ADD
+<        	 LSS
 1        	 INT_LIT
 ;        	 SEMICOLON
 x        	 IDENT
--        	 SUB
+>        	 GTR
 1        	 INT_LIT
 ;        	 SEMICOLON
 x        	 IDENT
-*        	 MUL
+<=       	 LEQ
 1        	 INT_LIT
 ;        	 SEMICOLON
 x        	 IDENT
-/        	 QUO
+>=       	 GEQ
 1        	 INT_LIT
 ;        	 SEMICOLON
 x        	 IDENT
-%        	 REM
+==       	 EQL
 1        	 INT_LIT
 ;        	 SEMICOLON
 x        	 IDENT
-++       	 INC
-;        	 SEMICOLON
-x        	 IDENT
---       	 DEC
-;        	 SEMICOLON
-x        	 IDENT
-&&       	 AND
-y        	 IDENT
-;        	 SEMICOLON
-x        	 IDENT
-||       	 OR
-y        	 IDENT
-;        	 SEMICOLON
-!        	 NOT
-x        	 IDENT
+!=       	 NEQ
+1        	 INT_LIT
 ;        	 SEMICOLON
 
 Finish scanning,
-total line: 10
+total line: 6
 comment line: 0

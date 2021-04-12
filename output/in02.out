@@ -1,41 +1,28 @@
 x        	 IDENT
-+        	 ADD
+=        	 ASSIGN
 1        	 INT_LIT
 ;        	 SEMICOLON
 x        	 IDENT
--        	 SUB
++=       	 ADD_ASSIGN
 1        	 INT_LIT
 ;        	 SEMICOLON
 x        	 IDENT
-*        	 MUL
+-=       	 SUB_ASSIGN
 1        	 INT_LIT
 ;        	 SEMICOLON
 x        	 IDENT
-/        	 QUO
+*=       	 MUL_ASSIGN
 1        	 INT_LIT
 ;        	 SEMICOLON
 x        	 IDENT
-%        	 REM
+/=       	 QUO_ASSIGN
 1        	 INT_LIT
 ;        	 SEMICOLON
 x        	 IDENT
-++       	 INC
-;        	 SEMICOLON
-x        	 IDENT
---       	 DEC
-;        	 SEMICOLON
-x        	 IDENT
-&&       	 AND
-y        	 IDENT
-;        	 SEMICOLON
-x        	 IDENT
-||       	 OR
-y        	 IDENT
-;        	 SEMICOLON
-!        	 NOT
-x        	 IDENT
+%=       	 REM_ASSIGN
+1        	 INT_LIT
 ;        	 SEMICOLON
 
 Finish scanning,
-total line: 10
+total line: 6
 comment line: 0
