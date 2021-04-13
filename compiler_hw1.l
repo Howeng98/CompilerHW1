@@ -18,8 +18,6 @@ id {letter}+({letter}|{digit})*
 inumber {digit}+
 fnumber ({digit}*\.{digit}+)
 %x string
-cpp_comment "//".*
-%x c_comment
 
 
 
@@ -54,7 +52,7 @@ cpp_comment "//".*
 "]"          { printf("%-8s \t %s\n", yytext, "RBRACK"); }
 "{"          { printf("%-8s \t %s\n", yytext, "LBRACE"); }
 "}"          { printf("%-8s \t %s\n", yytext, "RBRACE"); }
-";"          { printf("%-8s \t %s", yytext, "SEMICOLON"); }
+";"          { printf("%-8s \t %s\n", yytext, "SEMICOLON"); }
 ","          { printf("%-8s \t %s\n", yytext, "COMMA"); }
 "print"         { printf("%-8s \t %s\n", yytext, "PRINT"); }
 "return"        { printf("%-8s \t %s\n", yytext, "RETURN"); }
@@ -71,21 +69,39 @@ cpp_comment "//".*
 "continue"      { printf("%-8s \t %s\n", yytext, "CONTINUE"); }
 "break"         { printf("%-8s \t %s\n", yytext, "BREAK"); }
 "void"          { printf("%-8s \t %s\n", yytext, "VOID"); }
-"\""            { printf("%-8s \t %s\n", yytext, "QUOTA"); }}
-"\n"            { printf("\n");line_num++;}         
+"\n"            { line_num++;
+                  if(strcmp(yytext+1, "\0")==0){
+                    
+                  }
+                  else{
+                    printf("%s", yytext);
+                  }                  
+                }
 
-\"				        { BEGIN string;       printf("%-8s \t %s\n", yytext, "QUOTA");}
-<string>{letter}*|{digit}*       {                     printf("%-8s \t %s\n", yytext, "STRING_LIT");}
-<string>\"		        { BEGIN INITIAL;      printf("%-8s \t %s\n", yytext, "QUOTA");}
-
-"/*"                    { BEGIN c_comment;    printf("%-8s \t %s\n", yytext, "C Comment"); comment_num++; line_num++;}
-<c_comment>[^*\n]+      { printf("%-8s \t %s\n", yytext, "C Comment"); comment_num++; line_num++;}
-<c_comment>"*"          { printf("%-8s \t %s\n", yytext, "C Comment"); comment_num++; line_num++;}
-<c_comment>"*/"         { printf("%-8s \t %s\n", yytext, "C Comment"); comment_num++; line_num++;}
+"\""		                     { BEGIN string;       printf("%-8s \t %s\n", yytext, "QUOTA");}
+<string>{letter}*|{digit}*       {  printf("%-8s \t %s\n", yytext, "STRING_LIT");}
+<string>"\""		             { BEGIN INITIAL;      printf("%-8s \t %s\n", yytext, "QUOTA");}
 
 
-
-{cpp_comment}	        { printf("%-8s \t %s\n", yytext, "C++ Comment"); comment_num++; line_num++;}
+"//".*    {   printf("%s \t %s\n", yytext,"C++ Comment"); comment_num++;}
+"/*"[a-zA-z0-9.+*% \n-]*"*/"  { 
+              char * ptr =strchr(yytext,'\n');
+              while(ptr){
+                * ptr = '\0';
+                printf("%s",yytext);                
+                if(strlen(yytext)==0){
+                    ;                    
+                }
+                else{
+                    printf(" \t %s\n","C Comment");
+                    comment_num++;
+                }
+                line_num++;
+                yytext = ptr+1;
+                ptr = strchr(yytext,'\n');
+              }
+              printf("%s \t %s\n", yytext,"C Comment");comment_num++;
+              }
 
 
 {inumber}        { printf("%-8s \t %s\n", yytext, "INT_LIT"); }
@@ -110,7 +126,7 @@ int main(int argc, char *argv[])
         yyin = stdin;
     }
     yylex();
-    printf("\n\nFinish scanning,\n");
+    printf("\nFinish scanning,\n");
     printf("total line: %d\n", line_num);
     printf("comment line: %d\n", comment_num);
     fclose(yyin);
