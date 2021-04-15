@@ -115,3 +115,8 @@ $ od -c answer/in05_comment.out
 
   - Ubuntu 20.04 LTS
   - Install dependencies: ``$ sudo apt install gcc flex bison python3 git``
+
+## 4. References
+
+   - Generating a lexical analyzer with the lex command: (https://www.ibm.com/docs/en/aix/7.1?topic=information-generating-lexical-analyzer-lex-command)
+   - C tokens, Keywords, Identifiers: (https://www.guru99.com/c-tokens-keywords-identifier.html)
