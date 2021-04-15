@@ -90,7 +90,7 @@ The undefined characters or strings should be discarded by your scanner during p
 Here we have prepared 11 μC programs, which are used to test the functionalities of your scanner.
 
 ``` Python
-python3 judge/judege.py input/in01_arithmetic.c output/in01.out
+python3 judge/judge.py input/in01_arithmetic.c output/in01.out
 ```
 <p align="center">
   <img src='https://user-images.githubusercontent.com/44123278/114822684-04eb2600-9df5-11eb-9dc7-976f9a08c559.PNG')
