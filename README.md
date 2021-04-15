@@ -19,19 +19,19 @@ Tokens are divided into two classes:
 
 The following tokens will be recognized by the scanner and will be eventually passed to the parser.
 
-**1.1.1 Delimiters**
+#### **1.1.1 Delimiters**
 
 ![pic1](https://user-images.githubusercontent.com/44123278/114821521-44b10e00-9df3-11eb-82c9-673ac0d82a42.PNG)
 
-**1.1.2 Arithmetic, Relational, and Logical Operators**
+#### **1.1.2 Arithmetic, Relational, and Logical Operators**
 
 ![pic2](https://user-images.githubusercontent.com/44123278/114821581-585c7480-9df3-11eb-9bf6-29f2259eb6ad.PNG)
 
-**1.1.3 Keywords**
+#### **1.1.3 Keywords**
 
 ![pic3](https://user-images.githubusercontent.com/44123278/114821606-64e0cd00-9df3-11eb-859c-c1c792a92c1a.PNG)
 
-**1.1.4 Identifiers**
+#### **1.1.4 Identifiers**
 
 An identifier is a string of letters (``a ~ z`` , ``A ~ Z`` , ``_`` ) and digits ( ``0 ~ 9`` ) and it begins with a letter or underscore. Identifiers are
 case-sensitive; for example, ``ident`` , ``Ident`` , and ``IDENT`` are not the same identifier. Note that keywords are not identifiers.
