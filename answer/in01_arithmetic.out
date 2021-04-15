@@ -37,5 +37,5 @@ x        	 IDENT
 ;        	 SEMICOLON
 
 Finish scanning,
-total line: 10
+total line: 11
 comment line: 0

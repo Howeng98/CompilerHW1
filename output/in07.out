@@ -1,0 +1,29 @@
+int      	 INT
+x        	 IDENT
+=        	 ASSIGN
+0        	 INT_LIT
+;        	 SEMICOLON
+for      	 FOR
+(        	 LPAREN
+x        	 IDENT
+=        	 ASSIGN
+0        	 INT_LIT
+;        	 SEMICOLON
+x        	 IDENT
+<        	 LSS
+10       	 INT_LIT
+;        	 SEMICOLON
+x        	 IDENT
+++       	 INC
+)        	 RPAREN
+{        	 LBRACE
+print    	 PRINT
+(        	 LPAREN
+x        	 IDENT
+)        	 RPAREN
+;        	 SEMICOLON
+}        	 RBRACE
+
+Finish scanning,
+total line: 4
+comment line: 0

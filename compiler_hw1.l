@@ -20,7 +20,6 @@ fnumber ({digit}*\.{digit}+)
 %x string
 
 
-
 /* Rules section */
 %%
 
@@ -71,25 +70,26 @@ fnumber ({digit}*\.{digit}+)
 "void"          { printf("%-8s \t %s\n", yytext, "VOID"); }
 "\n"            { line_num++;
                   if(strcmp(yytext+1, "\0")==0){
-                    
+                    ;
                   }
                   else{
                     printf("%s", yytext);
                   }                  
                 }
 
-"\""		                     { BEGIN string;       printf("%-8s \t %s\n", yytext, "QUOTA");}
-<string>{letter}*|{digit}*       {  printf("%-8s \t %s\n", yytext, "STRING_LIT");}
-<string>"\""		             { BEGIN INITIAL;      printf("%-8s \t %s\n", yytext, "QUOTA");}
+"\"".*"\"" { printf("%-8s \t %s\n", "\"","QUOTA");
+             *(yytext + strlen(yytext)-1) = '\0' ;
+             printf("%-8s \t %s\n", yytext+1,"STRING_LIT");
+             printf("%-8s \t %s\n", "\"","QUOTA");}
 
 
 "//".*    {   printf("%s \t %s\n", yytext,"C++ Comment"); comment_num++;}
-"/*"[a-zA-z0-9.+*% \n-]*"*/"  { 
+"/*"[a-zA-z0-9.+*% \n-]*"*/" { 
               char * ptr =strchr(yytext,'\n');
               while(ptr){
                 * ptr = '\0';
                 printf("%s",yytext);                
-                if(strlen(yytext)==0){
+                if(strcmp(yytext+1, "\n")==0){
                     ;                    
                 }
                 else{
@@ -100,9 +100,12 @@ fnumber ({digit}*\.{digit}+)
                 yytext = ptr+1;
                 ptr = strchr(yytext,'\n');
               }
-              printf("%s \t %s\n", yytext,"C Comment");comment_num++;
+              printf("%s \t %s\n", yytext,"C Comment"); comment_num++;
               }
 
+"/* "+(letter*|digit*)*+"\n" {
+              printf("Checked!!!!\n");
+}
 
 {inumber}        { printf("%-8s \t %s\n", yytext, "INT_LIT"); }
 {fnumber}        { printf("%-8s \t %s\n", yytext, "FLOAT_LIT"); }

@@ -1,0 +1,26 @@
+int      	 INT
+x        	 IDENT
+=        	 ASSIGN
+0        	 INT_LIT
+;        	 SEMICOLON
+print    	 PRINT
+(        	 LPAREN
+"        	 QUOTA
+I have   	 STRING_LIT
+"        	 QUOTA
+)        	 RPAREN
+print    	 PRINT
+(        	 LPAREN
+x        	 IDENT
+)        	 RPAREN
+print    	 PRINT
+(        	 LPAREN
+"        	 QUOTA
+ apple(s)\n 	 STRING_LIT
+"        	 QUOTA
+)        	 RPAREN
+;        	 SEMICOLON
+
+Finish scanning,
+total line: 4
+comment line: 0

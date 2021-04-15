@@ -1,0 +1,33 @@
+if       	 IF
+(        	 LPAREN
+x        	 IDENT
+>        	 GTR
+a        	 IDENT
+)        	 RPAREN
+{        	 LBRACE
+x        	 IDENT
+=        	 ASSIGN
+a        	 IDENT
+;        	 SEMICOLON
+print    	 PRINT
+(        	 LPAREN
+x        	 IDENT
+)        	 RPAREN
+;        	 SEMICOLON
+}        	 RBRACE
+else     	 ELSE
+{        	 LBRACE
+a        	 IDENT
+=        	 ASSIGN
+x        	 IDENT
+;        	 SEMICOLON
+print    	 PRINT
+(        	 LPAREN
+a        	 IDENT
+)        	 RPAREN
+;        	 SEMICOLON
+}        	 RBRACE
+
+Finish scanning,
+total line: 8
+comment line: 0
