@@ -110,3 +110,8 @@ Check diff
 $ diff -y tmp.out answer/in01_arithmetic.out
 $ od -c answer/in05_comment.out
 ```
+
+## 3. Environmental Setup
+
+  - Ubuntu 20.04 LTS
+  - Install dependencies: ``$ sudo apt install gcc flex bison python3 git``
