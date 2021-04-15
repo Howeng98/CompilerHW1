@@ -1,7 +1,9 @@
 # Lexical Analyzer (Scanner)
 
+<p align="center">
+  <img src='https://user-images.githubusercontent.com/44123278/114823671-6bbd0f00-9df6-11eb-8283-2e90af8666d4.PNG'>  
+</p>
 
-![structure](https://user-images.githubusercontent.com/44123278/114823671-6bbd0f00-9df6-11eb-8283-2e90af8666d4.PNG)
 
 
 This assignment is to write a scanner for the μC language (NOT C language) with lex. This document gives the lexical definition
@@ -23,15 +25,21 @@ The following tokens will be recognized by the scanner and will be eventually pa
 
 ### **1.1.1 Delimiters**
 
-![pic1](https://user-images.githubusercontent.com/44123278/114821521-44b10e00-9df3-11eb-82c9-673ac0d82a42.PNG)
+<p align="center">
+  <img src='https://user-images.githubusercontent.com/44123278/114821521-44b10e00-9df3-11eb-82c9-673ac0d82a42.PNG')
+</p>
 
 ### **1.1.2 Arithmetic, Relational, and Logical Operators**
 
-![pic2](https://user-images.githubusercontent.com/44123278/114821581-585c7480-9df3-11eb-9bf6-29f2259eb6ad.PNG)
+<p align="center">
+  <img src='https://user-images.githubusercontent.com/44123278/114821581-585c7480-9df3-11eb-9bf6-29f2259eb6ad.PNG')
+</p>
 
 ### **1.1.3 Keywords**
 
-![pic3](https://user-images.githubusercontent.com/44123278/114821606-64e0cd00-9df3-11eb-859c-c1c792a92c1a.PNG)
+<p align="center">
+  <img src='https://user-images.githubusercontent.com/44123278/114821606-64e0cd00-9df3-11eb-859c-c1c792a92c1a.PNG')
+</p>
 
 ### **1.1.4 Identifiers**
 
@@ -84,16 +92,23 @@ Here we have prepared 11 μC programs, which are used to test the functionalitie
 ``` Python
 python3 judge/judege.py input/in01_arithmetic.c output/in01.out
 ```
-
-![pic4](https://user-images.githubusercontent.com/44123278/114822684-04eb2600-9df5-11eb-9dc7-976f9a08c559.PNG)
+<p align="center">
+  <img src='https://user-images.githubusercontent.com/44123278/114822684-04eb2600-9df5-11eb-9dc7-976f9a08c559.PNG')
+</p>
 
 ### 2.2 Output
 
-![pic5](https://user-images.githubusercontent.com/44123278/114822889-509dcf80-9df5-11eb-87d4-e0884af73c1a.PNG)
+<p align="center">
+  <img src='https://user-images.githubusercontent.com/44123278/114822889-509dcf80-9df5-11eb-87d4-e0884af73c1a.PNG')
+</p>
 
-![pic6](https://user-images.githubusercontent.com/44123278/114822899-54c9ed00-9df5-11eb-943a-9cfc31fd019d.PNG)
+<p align="center">
+  <img src='https://user-images.githubusercontent.com/44123278/114822899-54c9ed00-9df5-11eb-943a-9cfc31fd019d.PNG')
+</p>
 
-![pic7](https://user-images.githubusercontent.com/44123278/114822905-5693b080-9df5-11eb-87ce-becc95cd2873.PNG)
+<p align="center">
+  <img src='https://user-images.githubusercontent.com/44123278/114822905-5693b080-9df5-11eb-87ce-becc95cd2873.PNG')
+</p>
 
 ### 2.3 Debug
 
