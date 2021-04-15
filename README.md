@@ -9,13 +9,13 @@ TODO
 
 
 ## 1. Lexical Definitions
----
+
 
 Tokens are divided into two classes:
   - tokens that will be passed to the parser, and
   - tokens that will discarded by the scanner (e.g., recognized but not pased to the parser).
 
-**1.1 Tokens that will be passed to the parser**
+### **1.1 Tokens that will be passed to the parser**
 
 The following tokens will be recognized by the scanner and will be eventually passed to the parser.
 
@@ -31,5 +31,44 @@ The following tokens will be recognized by the scanner and will be eventually pa
 
 ![pic3](https://user-images.githubusercontent.com/44123278/114821606-64e0cd00-9df3-11eb-859c-c1c792a92c1a.PNG)
 
+**1.1.4 Identifiers**
 
+An identifier is a string of letters (``a ~ z`` , ``A ~ Z`` , ``_`` ) and digits ( ``0 ~ 9`` ) and it begins with a letter or underscore. Identifiers are
+case-sensitive; for example, ``ident`` , ``Ident`` , and ``IDENT`` are not the same identifier. Note that keywords are not identifiers.
+
+**1.1.5 Integer Literals and Floating-Point Literals**
+
+Integer literals: a sequence of one or more digits, such as ``1`` , ``23`` , and ``666`` .
+Floating-point literals: numbers that contain floating decimal points, such as ``0.2`` and ``3.141`` .
+
+**1.1.6 String Literals**
+
+A string literal is a sequence of zero or more ASCII characters appearing between double-quote ( ``"`` ) delimiters. A double-quote
+appearing with a string must be written after a ``"`` , e.g., ``"abc"`` , ``"Hello world"`` , and ``"She is a \"girl\""`` .
+
+### **1.2 Tokens that will be discarded**
+
+The following tokens will be recognized by the scanner, but should be discarded, rather than returning to the parser.
+ 
+**1.2.1 Whitespace**
+
+A sequence of blanks(spaces), tabs, and newlines.
+
+**1.2.2 Comments**
+
+Comments can be added in several ways:
+  - C-style is texts surrounded by ``/*`` and ``*/`` delimiters, which may span more than one line
+  - C++ style comments are a text following a ``//`` delimiter running up to the end of the line.
+
+Whichever comment style is encountered first remains in effect until the appropriate comment close is encountered. For
+example,
+
+``// this is a comment // line */ /* with /* delimiters */ before the end``
+and
+``/* this is a comment // line with some and C delimiters */``
+are both valid comments.
+
+**1.2.3 Other characters**
+
+The undefined characters or strings should be discarded by your scanner during parsing.
 
