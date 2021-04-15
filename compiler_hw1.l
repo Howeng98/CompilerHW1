@@ -17,8 +17,6 @@ digit [0-9]
 id {letter}+({letter}|{digit})*
 inumber {digit}+
 fnumber ({digit}*\.{digit}+)
-%x string
-
 
 /* Rules section */
 %%
@@ -84,7 +82,8 @@ fnumber ({digit}*\.{digit}+)
 
 
 "//".*    {   printf("%s \t %s\n", yytext,"C++ Comment"); comment_num++;}
-"/*"[a-zA-z0-9.+*% \n-]*"*/" { 
+
+"/*"([^*]|\*+[^*/])*\*+"/" { 
               char * ptr =strchr(yytext,'\n');
               while(ptr){
                 * ptr = '\0';
@@ -103,9 +102,6 @@ fnumber ({digit}*\.{digit}+)
               printf("%s \t %s\n", yytext,"C Comment"); comment_num++;
               }
 
-"/* "+(letter*|digit*)*+"\n" {
-              printf("Checked!!!!\n");
-}
 
 {inumber}        { printf("%-8s \t %s\n", yytext, "INT_LIT"); }
 {fnumber}        { printf("%-8s \t %s\n", yytext, "FLOAT_LIT"); }

@@ -125,7 +125,11 @@ a        	 IDENT
 *        	 MUL
 7        	 INT_LIT
 ;        	 SEMICOLON
-/* Arithmetic */ 	 C Comment
+/        	 QUO
+*        	 MUL
+Arithmetic 	 IDENT
+*        	 MUL
+/        	 QUO
 print    	 PRINT
 (        	 LPAREN
 x        	 IDENT
@@ -188,4 +192,4 @@ return   	 RETURN
 
 Finish scanning,
 total line: 51
-comment line: 6
+comment line: 5
