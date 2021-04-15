@@ -1,11 +1,13 @@
 # Lexical Analyzer (Scanner)
 
 
+![structure](https://user-images.githubusercontent.com/44123278/114823671-6bbd0f00-9df6-11eb-8283-2e90af8666d4.PNG)
+
+
 This assignment is to write a scanner for the μC language (NOT C language) with lex. This document gives the lexical definition
 of the language, while the syntactic definition and code generation will follow in subsequent assignments.
 
-TODO
-1. ask TA can I just run the judge.py with specific input and output
+
 
 
 ## 1. Lexical Definitions
